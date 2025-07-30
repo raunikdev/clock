@@ -10,6 +10,9 @@ function Clock(){
             clearInterval(intervalid)
         }
     },[])
+    useEffect(()=>{
+        document.title= formatTime()
+    })
     function formatTime(){
         let hours = time.getHours();
         let minutes = time.getMinutes();
